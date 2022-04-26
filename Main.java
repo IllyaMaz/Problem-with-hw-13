@@ -9,14 +9,12 @@ public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         User user = createUser();
-//        System.out.println(user.toString());
-//
+
         UserUtil userUtil = new UserUtil();
-//        User user1 = userUtil.createUser(URI.create(URI_ONE),user);
-//        System.out.println(userUtil.sendGet(URI.create(URI_ONE)));
-//        System.out.println(user1);
-        //System.out.println(userUtil.overwrite(URI.create(URI_TWO)));
-        System.out.println(userUtil.sendGet(URI.create(URI_TWO)).toString());
+
+        System.out.println(userUtil.overwrite(URI.create(URI_TWO)));
+
+
     }
 
     private static User createUser() {
