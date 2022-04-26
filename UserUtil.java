@@ -41,7 +41,7 @@ public class UserUtil {
         List<User> user = new ArrayList<>();
         user=GSON.fromJson(response.body(), new TypeToken<List<User>>(){}.getType());
         user.get(0).setUsername("Illya");
-        String s = GSON.toJson(user);
+        String s = GSON.toJson(user.get(0));//user not work for POST , user.get(0) work for POST and dont work for Put again
         HttpRequest request1 = HttpRequest.newBuilder()
                 .uri(uri)
                 .PUT(HttpRequest.BodyPublishers.ofString(s))
