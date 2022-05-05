@@ -4,15 +4,15 @@ import java.io.IOException;
 import java.net.URI;
 
 public class Main {
-    private static final String URI_ONE = "https://jsonplaceholder.typicode.com/users";
-    private static final String URI_TWO = "https://jsonplaceholder.typicode.com/users?id=1";
+    private static final String URI_ONE = "https://jsonplaceholder.typicode.com";
+    private static final String URI_TWO = "https://jsonplaceholder.typicode.com/users/1";
 
     public static void main(String[] args) throws IOException, InterruptedException {
         User user = createUser();
 
         UserUtil userUtil = new UserUtil();
 
-        System.out.println(userUtil.overwrite(URI.create(URI_TWO)));
+        System.out.println(userUtil.getAvailableTasks(URI.create(URI_ONE), 1).toString());
 
 
     }
